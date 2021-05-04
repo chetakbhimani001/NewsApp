@@ -11,7 +11,7 @@ import com.example.newsapp.utils.httpError
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import retrofit2.Response
@@ -60,8 +60,9 @@ class MainRepository @Inject constructor(
 
 
 }
+
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 interface NewsRepositoryModule {
     @Binds
     fun it(it: MainRepository): NewsRepository

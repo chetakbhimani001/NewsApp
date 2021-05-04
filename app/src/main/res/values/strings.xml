@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">DemoApp</string>
-    <string name="title_activity_news_detail">ScrollingActivity</string>
+    <string name="app_name">Newsapp</string>
     <string name="action_settings">Settings</string>
 </resources>
