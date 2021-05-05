@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val mainRepository: MainRepository
+    mainRepository: MainRepository
 ):ViewModel(){
 
     private val newsArticleDb: LiveData<Resource<List<NewsArticle>>> = mainRepository.getNewsArticles().asLiveData()

@@ -25,9 +25,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        toolbar_title.setText(getString(R.string.news))
-
-        supportActionBar!!.setDisplayShowTitleEnabled(false)
+        toolbar_title.text = getString(R.string.news)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         adapter = NewsAdapter()
         rvNews.layoutManager = LinearLayoutManager(this)
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 Status.ERROR -> {
                     progress.visibility = View.GONE
                     rvNews.visibility = View.VISIBLE
-                    Snackbar.make(rootView, "Something went wrong", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(rootView, getString(R.string.something_wrong), Snackbar.LENGTH_SHORT).show()
                 }
             }
         })

@@ -58,18 +58,12 @@ A
 gradlew.bat,2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3
 w
 Gapp/src/androidTest/java/com/example/newsapp/ExampleInstrumentedTest.kt,2/4/242d679ccc16af455d1f1e1872838f30eff71672
-d
-4app/src/main/res/drawable/ic_launcher_background.xml,4/9/49845c622cb06d895975c7b1e3f943e320bce688
 h
 8app/src/main/res/drawable-v24/ic_launcher_foreground.xml,0/7/078508c831007ccb3938b355f0d30a8368f99a8d
 b
 2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml,8/e/8e27ba16c655f421171956147d0fde89b7d25d17
 h
 8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml,6/e/6ec7d34b130497a10dc92abcde9b313d370a89df
-R
-"app/src/main/res/values/dimens.xml,c/3/c3c1811dec2dbad2deeafb9aad505ca9631da740
-R
-"app/src/main/res/values/styles.xml,f/7/f79cc2688e29fcbc286fda14ae07b27c9e83690f
 R
 "app/src/main/res/values/themes.xml,e/b/eb7f0f821bde169dd21862705b2b042d2cea69a3
 `

@@ -41,7 +41,7 @@ class MainRepository @Inject constructor(
 //            if(it.isNullOrEmpty())
 //            {
                 val freshNews = getNewsFromWebservice()
-                freshNews.body()?.articles?.let(newsDao::clearAndCacheArticles)
+                freshNews?.body()?.articles?.let(newsDao::clearAndCacheArticles)
             //}
         val cachedNews = newsDao.getNewsArticles()
 
