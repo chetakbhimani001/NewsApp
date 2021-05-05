@@ -25,7 +25,7 @@ class NewsDetailActivity : AppCompatActivity() {
         toolbar_layout.setContentScrimColor(resources.getColor(R.color.black));
 
         toolbar.setNavigationOnClickListener { onBackPressed() }
-        var data = intent.getParcelableExtra<NewsArticle>(Constants.INTENT_DATA)?.let {
+        intent.getParcelableExtra<NewsArticle>(Constants.INTENT_DATA)?.let {
                 findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).title = it.source.name
                 txtTitle.text = it.title
                 txtDescription.text = it.content

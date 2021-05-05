@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -49,7 +50,8 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-
+        holder.itemView.animation =
+            AnimationUtils.loadAnimation(holder.itemView.context, R.anim.item_animation_fall_down)
         val item = differ.currentList[position]
 
         holder.itemView.apply {
