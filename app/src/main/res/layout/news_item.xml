@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
     xmlns:tools1="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_margin="15dp"
+    android:layout_marginBottom="1dp"
     android:background="@color/colorPrimary"
     android:backgroundTint="@color/colorPrimary"
-    xmlns:tools="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="1dp">
+    android:elevation="12dp"
+    android:innerRadius="0dp"
+    android:shape="ring"
+    app:cardCornerRadius="10dp">
     <!-- News block -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,11 +21,13 @@
         <ImageView
             android:id="@+id/newsImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="200dp"
+            android:foreground="@drawable/image_overlay"
+            android:scaleType="centerCrop" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -29,47 +35,60 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:maxLines="3"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:layout_constraintTop_toTopOf="parent"
+                android:textSize="16sp"
+                tools1:text="ABC News"
                 tools:layout_constraintStart_toStartOf="parent"
-                tools1:text="ABC News" />
+                tools:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvContent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                tools1:text="ABC News"
-                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed-light"
+                android:maxLines="3"
+                android:textColor="@color/light"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools1:text="ABC News" />
 
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvSource"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                tools1:text="ABC News"
-                app:layout_constraintEnd_toStartOf="@+id/tvNewsPublishedAt"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
                 android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvNewsPublishedAt"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/tvContent"
-                />
+                tools1:text="ABC News" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvNewsPublishedAt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                tools1:text="ABC News"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:gravity="end"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
 
-                app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContent"
+
+                tools1:text="ABC News" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

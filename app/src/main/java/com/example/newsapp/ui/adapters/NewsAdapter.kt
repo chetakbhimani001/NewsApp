@@ -1,4 +1,4 @@
-package com.example.newsapp.ui
+package com.example.newsapp.ui.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.akshay.newsapp.news.api.NewsArticle
 import com.bumptech.glide.Glide
 import com.example.newsapp.R
+import com.example.newsapp.ui.activities.NewsDetailActivity
 import com.example.newsapp.utils.Constants.INTENT_DATA
 import kotlinx.android.synthetic.main.news_item.view.*
 
@@ -60,7 +61,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>(){
                 .load(item.urlToImage)
                 .into(newsImage)
             setOnClickListener {
-                val i = Intent(context,NewsDetailActivity::class.java)
+                val i = Intent(context, NewsDetailActivity::class.java)
                 i.putExtra(INTENT_DATA,item)
                 context.startActivity(i)
             }

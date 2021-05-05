@@ -1,4 +1,4 @@
-package com.example.newsapp.ui
+package com.example.newsapp.ui.activities
 
 import android.os.Bundle
 import android.view.View
@@ -11,7 +11,6 @@ import com.example.newsapp.utils.Constants
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import kotlinx.android.synthetic.main.activity_news_detail.*
 import kotlinx.android.synthetic.main.content_scrolling.*
-import kotlinx.android.synthetic.main.news_item.view.*
 
 
 class NewsDetailActivity : AppCompatActivity() {
@@ -23,6 +22,7 @@ class NewsDetailActivity : AppCompatActivity() {
         findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).setExpandedTitleTextAppearance(R.style.ExpandedAppBar)
         findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).setCollapsedTitleTextAppearance(R.style.CollapsedAppBar)
         val toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+        toolbar_layout.setContentScrimColor(resources.getColor(R.color.black));
 
         toolbar.setNavigationOnClickListener { onBackPressed() }
         var data = intent.getParcelableExtra<NewsArticle>(Constants.INTENT_DATA)?.let {
