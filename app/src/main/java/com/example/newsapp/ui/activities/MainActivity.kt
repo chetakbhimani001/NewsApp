@@ -2,8 +2,11 @@ package com.example.newsapp.ui.activities
 
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.R
@@ -52,7 +55,11 @@ class MainActivity : AppCompatActivity() {
                 Status.ERROR -> {
                     progress.visibility = View.GONE
                     rvNews.visibility = View.VISIBLE
-                    Snackbar.make(rootView, getString(R.string.something_wrong), Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(
+                        rootView,
+                        getString(R.string.something_wrong),
+                        Snackbar.LENGTH_SHORT
+                    ).show()
                 }
             }
         })
